@@ -1,13 +1,7 @@
 import { integer } from "drizzle-orm/pg-core";
 import { jsonb } from "drizzle-orm/pg-core";
-import { pgTable, serial, text } from "drizzle-orm/pg-core";
-
-export const users = pgTable("users", {
-  id: serial("id").primaryKey(),
-  name: text("name").notNull(),
-  email: text("email").notNull().unique(),
-  password: text("password").notNull(),
-});
+import { pgTable, serial } from "drizzle-orm/pg-core";
+import { users } from "./users.schema";
 
 export const profileInfo = pgTable("profile_info", {
   id: serial("id").primaryKey(),
