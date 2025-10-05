@@ -1,6 +1,7 @@
 import { pgTable, text, serial, integer } from "drizzle-orm/pg-core";
 import { users } from "./users.schema";
 import { primaryKey } from "drizzle-orm/pg-core";
+import { index } from "drizzle-orm/pg-core";
 
 export const groups = pgTable("groups", {
   id: serial("id").primaryKey(),
@@ -16,5 +17,6 @@ export const usersToGroups = pgTable(
   },
   (table) => ({
     pk: primaryKey({ columns: [table.user_id, table.group_id] }),
+    user_id_index: index("user_id_index").on(table.user_id),
   }),
 );
