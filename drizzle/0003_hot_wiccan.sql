@@ -11,7 +11,7 @@ CREATE TABLE "groups" (
 );
 --> statement-breakpoint
 CREATE TABLE "users_to_groups" (
-	"id" integer,
+	"user_id" integer,
 	"group_id" integer,
 	CONSTRAINT "users_to_groups_id_group_id_pk" PRIMARY KEY("id","group_id")
 );

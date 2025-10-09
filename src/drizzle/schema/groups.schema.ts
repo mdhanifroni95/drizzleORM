@@ -12,7 +12,7 @@ export const groups = pgTable("groups", {
 export const usersToGroups = pgTable(
   "users_to_groups",
   {
-    user_id: integer("id").references(() => users.id),
+    user_id: integer("user_id").references(() => users.id),
     group_id: integer("group_id").references(() => groups.id),
   },
   (table) => ({
