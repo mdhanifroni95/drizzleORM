@@ -3,7 +3,6 @@ import { CreatePostDto } from "./dto/create-post.dto";
 import { UpdatePostDto } from "./dto/update-post.dto";
 import { DRIZZLE } from "src/drizzle/drizzle.module";
 import type { DrizzleDb } from "src/drizzle/type/drizzle";
-import { posts } from "src/drizzle/schema/posts.schema";
 
 @Injectable()
 export class PostsService {
